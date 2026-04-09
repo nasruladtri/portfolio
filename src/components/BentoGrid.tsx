@@ -24,6 +24,15 @@ const projects = [
         link: "/",
         image: "/portfolio-preview.png",
     },
+    {
+        id: 3,
+        title: "Warung Pecel Yu Mur",
+        category: "Business Website",
+        color: "bg-pink",
+        className: "md:col-span-2 md:row-span-1",
+        link: "https://warung-pecel-yumur.vercel.app/",
+        image: "",
+    },
 ];
 
 export const BentoGrid = () => {
