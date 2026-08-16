@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
-import Image from "next/image";
 import { CTAButton } from "./CTAButton";
 
 const fadeUp = {
@@ -72,21 +71,6 @@ export const Footer = () => {
                             aria-label="Email"
                         >
                             <Mail className="w-10 h-10" />
-                        </a>
-                        <a
-                            href="https://fastwork.id/user/nasruladitri/web-development-43348927?source=seller-center_my-service_share-link"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center text-white text-3xl w-16 h-16 transition-transform duration-200 hover:-translate-y-0.5"
-                            aria-label="Fastwork"
-                        >
-                            <Image
-                                src="/fastwork.svg"
-                                alt="Fastwork"
-                                width={32}
-                                height={32}
-                                className="w-8 h-8"
-                            />
                         </a>
                     </div>
 

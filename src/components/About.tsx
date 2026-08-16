@@ -24,7 +24,7 @@ export const About = () => {
                     className="flex justify-center"
                 >
                     <Image
-                        src="/me.webp"
+                        src="/me.png"
                         alt="Nasrul Aditri"
                         width={300}
                         height={300}
