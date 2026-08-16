@@ -93,7 +93,7 @@ export const Footer = () => {
                     <hr className="mx-auto border-0 w-1/2 border-t-2 border-grey my-4" />
 
                     <p className="text-sm text-white/50">
-                        © {new Date().getFullYear()} Nasrul Aditri
+                        © {new Date().getFullYear()} Nasrul Aditri Rahmandika
                     </p>
                 </div>
             </footer>

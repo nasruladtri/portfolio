@@ -23,7 +23,7 @@ export const Hero = () => {
                 >
                     Hi, my name is{" "}
                     <span className="bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
-                        Nasrul Aditri
+                        Nasrul Aditri Rahmandika
                     </span>
                     <br />
                     I'm the{" "}

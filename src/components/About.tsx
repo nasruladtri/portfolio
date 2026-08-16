@@ -44,18 +44,23 @@ export const About = () => {
                     </h2>
 
                     <p className="text-lg leading-relaxed mb-4">
-                        I'm a{" "}
+                        Saya{" "}
+                        <span className="bg-secondary inline-block italic px-1 leading-relaxed">
+                            Nasrul Aditri Rahmandika
+                        </span>
+                        , seorang{" "}
                         <span className="bg-secondary inline-block italic px-1 leading-relaxed">
                             creative developer
                         </span>{" "}
-                        who believes code should have personality. I build modern,
-                        memorable web experiences with React, Next.js, and Laravel.
+                        yang percaya kode harus punya kepribadian. Saya membangun
+                        pengalaman web modern dan berkesan dengan React, Next.js, dan
+                        Laravel.
                     </p>
                     <p className="text-lg leading-relaxed mb-8">
-                        From government information systems to business websites, I enjoy
-                        turning complex problems into clean, delightful interfaces. When
-                        I'm not coding, I'm probably resizing windows to test
-                        responsiveness.
+                        Dari sistem informasi pemerintah hingga website bisnis, saya
+                        senang mengubah masalah kompleks menjadi antarmuka yang bersih
+                        dan menyenangkan. Saat tidak sedang coding, saya mungkin sedang
+                        mengubah ukuran window untuk menguji responsivitas.
                     </p>
 
                     <span className="mt-2">
