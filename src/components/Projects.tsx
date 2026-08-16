@@ -38,6 +38,7 @@ const projects: Project[] = [
         description:
             "Website bisnis untuk Warung Pecel Yu Mur — landing page modern untuk memperkenalkan menu, lokasi, dan informasi pemesanan, dikembangkan dengan React dan di-deploy ke Vercel.",
         link: "https://warung-pecel-yumur.vercel.app/",
+        image: "/warung_yumur-preview.png",
     },
 ];
 
@@ -47,26 +48,14 @@ const fadeUp = {
 };
 
 const ProjectImage = ({ project }: { project: Project }) => {
-    if (project.image) {
-        return (
-            <div className="relative aspect-video overflow-hidden rounded-lg shadow-[0_6px_10px_rgba(0,0,0,0.08),0_0_6px_rgba(0,0,0,0.05)] transition-transform duration-500 hover:scale-[1.02]">
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                />
-            </div>
-        );
-    }
     return (
-        <div className="relative aspect-video overflow-hidden rounded-lg shadow-[0_6px_10px_rgba(0,0,0,0.08),0_0_6px_rgba(0,0,0,0.05)] bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-            <div className="text-center">
-                <h4 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-widest">
-                    Yu Mur
-                </h4>
-                <p className="text-white/80 font-medium mt-2">Warung Pecel</p>
-            </div>
+        <div className="relative aspect-video overflow-hidden rounded-lg shadow-[0_6px_10px_rgba(0,0,0,0.08),0_0_6px_rgba(0,0,0,0.05)] transition-transform duration-500 hover:scale-[1.02]">
+            <Image
+                src={project.image!}
+                alt={project.title}
+                fill
+                className="object-cover"
+            />
         </div>
     );
 };
