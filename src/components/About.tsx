@@ -2,34 +2,71 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { CTAButton } from "./CTAButton";
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+};
 
 export const About = () => {
     return (
-        <section className="border-b-4 border-black flex flex-col md:flex-row">
-            <div className="w-full md:w-1/2 p-10 md:p-20 border-b-4 md:border-b-0 md:border-r-4 border-black bg-white flex items-center justify-center">
+        <section
+            id="about"
+            className="bg-gradient-to-br from-primary to-secondary text-white py-20 lg:pb-[12%] lg:[clip-path:polygon(0_0,100%_0,100%_80%,0_100%)]"
+        >
+            <div className="container max-w-6xl px-6 grid md:grid-cols-2 gap-12 items-center">
                 <motion.div
-                    whileHover={{ rotate: 2 }}
-                    className="w-full aspect-square border-4 border-black bg-teal shadow-hard flex items-center justify-center relative overflow-hidden"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}
+                    className="flex justify-center"
                 >
                     <Image
                         src="/me.webp"
                         alt="Nasrul Aditri"
-                        fill
-                        className="object-cover"
+                        width={300}
+                        height={300}
+                        className="rounded-lg shadow-lg"
                     />
                 </motion.div>
-            </div>
-            <div className="w-full md:w-1/2 p-10 md:p-20 bg-mustard flex flex-col justify-center">
-                <h2 className="text-5xl md:text-7xl font-serif mb-8 uppercase">Who Am I?</h2>
-                <p className="text-xl md:text-2xl font-sans font-medium mb-6 leading-relaxed">
-                    I'm a creative developer who believes code should have <span className="underline decoration-4 decoration-black">personality</span>.
-                </p>
-                <p className="text-lg font-sans mb-8">
-                    Specializing in React, Next.js, and breaking standard design rules to create memorable web experiences. When I'm not coding, I'm probably resizing windows to test responsiveness.
-                </p>
-                <button className="self-start text-xl font-bold border-b-4 border-black hover:bg-black hover:text-white transition-colors py-1">
-                    READ MORE
-                </button>
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}
+                    className="flex flex-col justify-center"
+                >
+                    <h2 className="section-title text-4xl md:text-5xl font-bold uppercase mb-12">
+                        About me
+                    </h2>
+
+                    <p className="text-lg leading-relaxed mb-4">
+                        I'm a{" "}
+                        <span className="bg-secondary inline-block italic px-1 leading-relaxed">
+                            creative developer
+                        </span>{" "}
+                        who believes code should have personality. I build modern,
+                        memorable web experiences with React, Next.js, and Laravel.
+                    </p>
+                    <p className="text-lg leading-relaxed mb-8">
+                        From government information systems to business websites, I enjoy
+                        turning complex problems into clean, delightful interfaces. When
+                        I'm not coding, I'm probably resizing windows to test
+                        responsiveness.
+                    </p>
+
+                    <span className="mt-2">
+                        <CTAButton
+                            href="https://github.com/nasruladtri"
+                            variant="outline"
+                        >
+                            View GitHub
+                        </CTAButton>
+                    </span>
+                </motion.div>
             </div>
         </section>
     );

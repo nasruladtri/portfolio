@@ -1,14 +1,14 @@
 import { Hero } from "@/components/Hero";
-import { BentoGrid } from "@/components/BentoGrid";
 import { About } from "@/components/About";
+import { Projects } from "@/components/Projects";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
     return (
-        <main className="bg-cream min-h-screen">
+        <main className="bg-white min-h-screen">
             <Hero />
-            <BentoGrid />
             <About />
+            <Projects />
             <Footer />
         </main>
     );

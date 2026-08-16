@@ -9,19 +9,14 @@ export default {
     theme: {
         extend: {
             colors: {
-                cream: "#FFFDF5",
-                dark: "#1a1a1a",
-                mustard: "#FFC107",
-                teal: "#004D40",
-                pink: "#F48FB1",
+                primary: "#8E2DE2",
+                secondary: "#4A00E0",
+                heading: "#2D1B4E",
+                "dark-grey": "#333333",
+                "light-grey": "#d2d2d2",
             },
             fontFamily: {
-                serif: ["var(--font-playfair-display)"],
-                sans: ["var(--font-inter)"],
-            },
-            boxShadow: {
-                hard: "4px 4px 0px 0px rgba(0,0,0,1)",
-                "hard-lg": "8px 8px 0px 0px rgba(0,0,0,1)",
+                sans: ["var(--font-montserrat)"],
             },
             container: {
                 center: true,
