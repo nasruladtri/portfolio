@@ -23,13 +23,24 @@ export const About = () => {
                     variants={fadeUp}
                     className="flex justify-center"
                 >
-                    <Image
-                        src="/me.png"
-                        alt="Nasrul Aditri"
-                        width={300}
-                        height={300}
-                        className="rounded-lg shadow-lg"
-                    />
+                    <div className="relative flex items-center justify-center">
+                        <div className="absolute w-[300px] h-[300px] md:w-[340px] md:h-[340px] rounded-full bg-white/20 blur-3xl" />
+                        <motion.div
+                            animate={{ y: [0, -12, 0] }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            className="relative w-[260px] h-[260px] md:w-[300px] md:h-[300px] rounded-full bg-gradient-to-br from-white/30 to-white/5 p-[3px]"
+                        >
+                            <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-primary to-secondary">
+                                <Image
+                                    src="/me.png"
+                                    alt="Nasrul Aditri Rahmandika"
+                                    width={300}
+                                    height={300}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        </motion.div>
+                    </div>
                 </motion.div>
 
                 <motion.div
