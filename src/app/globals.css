@@ -95,35 +95,29 @@
 @keyframes marioRun {
   0% {
     transform: translate(-220px, 0);
-    opacity: 1;
+    animation-timing-function: linear;
   }
-  58% {
+  55% {
     transform: translate(calc(94vw - 60px), 0);
-    opacity: 1;
+    animation-timing-function: ease-out;
   }
-  66% {
-    transform: translate(calc(94vw - 60px), -165px);
-    opacity: 1;
+  63% {
+    transform: translate(calc(94vw - 60px), -170px);
+    animation-timing-function: ease-in;
   }
-  72% {
+  69% {
     transform: translate(calc(94vw - 60px), -94px);
-    opacity: 1;
+    animation-timing-function: ease-in-out;
   }
-  78% {
-    transform: translate(calc(94vw - 60px), 60px);
-    opacity: 1;
+  83% {
+    transform: translate(calc(94vw - 60px), 0);
+    animation-timing-function: linear;
   }
-  82% {
-    transform: translate(calc(94vw - 60px), 60px);
-    opacity: 0;
-  }
-  85% {
+  86% {
     transform: translate(-220px, 0);
-    opacity: 0;
   }
   100% {
     transform: translate(-220px, 0);
-    opacity: 0;
   }
 }
 

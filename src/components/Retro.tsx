@@ -157,7 +157,7 @@ export const RetroBackground = () => (
                 <PixelMushroom />
             </div>
 
-            <div className="absolute right-[6%] bottom-8 w-14 hidden md:block">
+            <div className="absolute right-[6%] bottom-8 w-14 z-[5] hidden md:block">
                 <PixelPipe />
             </div>
 
