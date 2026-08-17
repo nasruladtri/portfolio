@@ -51,31 +51,104 @@ export const PixelQuestionBlock = () => (
     </svg>
 );
 
+export const PixelPipe = () => (
+    <svg viewBox="0 0 48 80" width="100%" preserveAspectRatio="none" aria-hidden="true">
+        <rect x="4" y="32" width="40" height="8" fill="#3fae3f" stroke="#000" strokeWidth="3" />
+        <rect x="12" y="40" width="24" height="40" fill="#3fae3f" stroke="#000" strokeWidth="3" />
+        <rect x="8" y="34" width="14" height="4" fill="#7edb7e" />
+        <rect x="15" y="43" width="10" height="10" fill="#2b8a2b" />
+    </svg>
+);
+
+export const PixelStar = () => (
+    <svg viewBox="0 0 32 32" width="100%" aria-hidden="true">
+        <path
+            d="M16 2l3.5 8.2 8.5 1-6.3 6 1.6 8.8-7.3-4.3-7.3 4.3 1.6-8.8-6.3-6 8.5-1z"
+            fill="#ffd700"
+            stroke="#000"
+            strokeWidth="2.5"
+        />
+    </svg>
+);
+
+export const PixelMushroom = () => (
+    <svg viewBox="0 0 32 40" width="100%" aria-hidden="true">
+        <path d="M4 20a12 12 0 0 1 24 0z" fill="#e52521" stroke="#000" strokeWidth="2.5" />
+        <circle cx="11" cy="14" r="3.5" fill="#fff" stroke="#000" strokeWidth="2" />
+        <circle cx="21" cy="12" r="3" fill="#fff" stroke="#000" strokeWidth="2" />
+        <rect x="12" y="20" width="8" height="14" fill="#fff3d6" stroke="#000" strokeWidth="2.5" />
+        <rect x="14" y="26" width="4" height="3" fill="#3d3d3d" />
+    </svg>
+);
+
 export const RetroBackground = () => (
     <>
         <div aria-hidden="true" className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-            <div className="cloud absolute top-10 left-0 w-28 opacity-90" style={{ animationDuration: "70s", animationDelay: "-20s" }}>
+            <div className="cloud absolute top-8 left-0 w-32 opacity-90" style={{ animationDuration: "70s", animationDelay: "-20s" }}>
                 <PixelCloud />
             </div>
-            <div className="cloud absolute top-40 left-0 w-20 opacity-80" style={{ animationDuration: "55s", animationDelay: "-5s" }}>
+            <div className="cloud absolute top-44 left-0 w-24 opacity-80" style={{ animationDuration: "55s", animationDelay: "-5s" }}>
                 <PixelCloud />
             </div>
-            <div className="cloud absolute top-24 left-0 w-24 opacity-70" style={{ animationDuration: "90s", animationDelay: "-40s" }}>
+            <div className="cloud absolute top-24 left-0 w-28 opacity-70" style={{ animationDuration: "90s", animationDelay: "-40s" }}>
                 <PixelCloud />
             </div>
-            <div className="absolute top-[30%] left-[12%] w-16 hidden md:block">
+            <div className="cloud absolute top-64 left-0 w-20 opacity-60" style={{ animationDuration: "80s", animationDelay: "-55s" }}>
+                <PixelCloud />
+            </div>
+
+            <div className="absolute top-[22%] left-[10%] w-10 hidden md:block">
                 <PixelCoin />
             </div>
+            <div className="absolute top-[30%] left-[48%] w-10 hidden md:block coin-anim">
+                <PixelCoin />
+            </div>
+            <div className="absolute top-[55%] right-[14%] w-10 hidden md:block">
+                <PixelCoin />
+            </div>
+            <div className="absolute top-[72%] left-[4%] w-10 hidden md:block coin-anim">
+                <PixelCoin />
+            </div>
+            <div className="absolute top-[80%] right-[4%] w-10 hidden md:block">
+                <PixelCoin />
+            </div>
+
+            <div className="absolute top-[38%] right-[6%] w-12 hidden md:block">
+                <PixelQuestionBlock />
+            </div>
+            <div className="absolute top-[62%] left-[30%] w-12 hidden md:block">
+                <PixelQuestionBlock />
+            </div>
+            <div className="absolute top-[28%] right-[38%] w-10 hidden lg:block">
+                <PixelStar />
+            </div>
+            <div className="absolute top-[68%] right-[26%] w-10 hidden lg:block coin-anim">
+                <PixelStar />
+            </div>
+            <div className="absolute top-[18%] right-[22%] w-12 hidden lg:block">
+                <PixelMushroom />
+            </div>
+
+            <div className="absolute right-[6%] bottom-[15%] w-14 hidden md:block">
+                <PixelPipe />
+            </div>
+
             <div className="absolute bottom-16 left-[8%] w-32">
                 <PixelBush />
             </div>
             <div className="absolute bottom-12 right-[10%] w-36">
                 <PixelBush />
             </div>
+            <div className="absolute bottom-8 left-[45%] w-28">
+                <PixelBush />
+            </div>
             <div className="absolute bottom-0 left-[22%] w-44">
                 <PixelHill />
             </div>
             <div className="absolute bottom-0 right-[30%] w-32">
+                <PixelHill />
+            </div>
+            <div className="absolute bottom-0 left-[60%] w-36">
                 <PixelHill />
             </div>
         </div>
