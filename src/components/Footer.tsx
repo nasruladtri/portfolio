@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUp, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Mail, MessageCircle, Youtube } from "lucide-react";
 import { PixelCoin } from "./Retro";
 
 const WHATSAPP_NUMBER = "6285784699144";
@@ -142,6 +142,15 @@ export const Footer = () => {
                             aria-label="LinkedIn"
                         >
                             <Linkedin className="w-10 h-10" />
+                        </a>
+                        <a
+                            href="https://www.youtube.com/@nasruladitri"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center text-white text-3xl w-16 h-16 transition-transform duration-200 hover:-translate-y-0.5"
+                            aria-label="YouTube"
+                        >
+                            <Youtube className="w-10 h-10" />
                         </a>
                         <a
                             href={`https://wa.me/${WHATSAPP_NUMBER}`}
