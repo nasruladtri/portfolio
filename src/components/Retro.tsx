@@ -157,7 +157,7 @@ export const RetroBackground = () => (
                 <PixelMushroom />
             </div>
 
-            <div className="absolute right-[6%] bottom-8 w-14 hidden md:block">
+            <div className="absolute right-[6%] bottom-8 w-20 hidden md:block">
                 <PixelPipe />
             </div>
 
@@ -181,7 +181,7 @@ export const RetroBackground = () => (
             </div>
         </div>
         <MarioRun />
-        <div aria-hidden="true" className="fixed right-[6%] bottom-8 w-14 hidden md:block pointer-events-none">
+        <div aria-hidden="true" className="fixed right-[6%] bottom-8 w-20 hidden md:block pointer-events-none">
             <PixelPipe />
         </div>
         <div aria-hidden="true" className="fixed bottom-0 inset-x-0 z-0 h-8 pointer-events-none">
