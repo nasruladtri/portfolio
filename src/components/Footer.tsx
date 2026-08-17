@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUp, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
-import { CTAButton } from "./CTAButton";
 
 const WHATSAPP_NUMBER = "6285784699144";
 
@@ -45,13 +44,10 @@ export const Footer = () => {
                     <h2 className="text-3xl md:text-4xl font-bold uppercase mb-12">
                         Contact
                     </h2>
-                    <p className="text-2xl md:text-3xl font-medium mb-10 leading-snug">
+                    <p className="text-2xl md:text-3xl font-medium mb-14 leading-snug">
                         Let's Build Something <br />
                         Crazy Together
                     </p>
-                    <CTAButton href="mailto:nasruladitri2@gmail.com" variant="outline">
-                        Call to Action
-                    </CTAButton>
                 </motion.div>
 
                 <motion.form
