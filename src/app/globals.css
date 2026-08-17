@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-padding-top: 5rem;
+  }
   body {
     @apply bg-white text-heading font-sans;
   }
