@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowUp, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { CTAButton } from "./CTAButton";
 
-const WHATSAPP_NUMBER = "6281234567890";
+const WHATSAPP_NUMBER = "6285784699144";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
