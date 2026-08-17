@@ -14,8 +14,8 @@ export const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 inset-x-0 z-50 brick-pattern border-b-4 border-black">
-            <nav className="container max-w-5xl px-6 py-3 flex items-center justify-between">
+        <header className="fixed top-0 inset-x-0 z-50 bg-mario-dark border-b-4 border-black">
+            <nav className="container max-w-5xl px-6 py-4 flex items-center justify-between">
                 <a
                     href="#top"
                     className="flex items-center gap-3"
@@ -30,11 +30,11 @@ export const Navbar = () => {
                         className="w-11 h-11 object-cover pixelated pixel-frame"
                     />
                     <span className="font-pixel text-sm md:text-base text-white pixel-outline">
-                        N.<span className="text-mario-yellow">ADITRI</span>
+                        NASRUL <span className="text-mario-yellow">ADITRI</span>
                     </span>
                 </a>
 
-                <ul className="hidden sm:flex items-center gap-7 font-pixel text-xs md:text-sm text-white">
+                <ul className="hidden sm:flex items-center gap-8 font-pixel text-sm md:text-base text-white">
                     {navLinks.map((link) => (
                         <li key={link.href}>
                             <a
@@ -59,14 +59,14 @@ export const Navbar = () => {
             </nav>
 
             {open && (
-                <div className="sm:hidden border-t-4 border-black brick-pattern">
+                <div className="sm:hidden border-t-4 border-black bg-mario-dark">
                     <ul className="container max-w-5xl px-6 py-4 flex flex-col gap-1">
                         {navLinks.map((link) => (
                             <li key={link.href}>
                                 <a
                                     href={link.href}
                                     onClick={() => setOpen(false)}
-                                    className="block px-3 py-3 font-pixel text-sm text-white pixel-outline hover:text-mario-yellow transition-colors"
+                                    className="block px-3 py-3 font-pixel text-base text-white pixel-outline hover:text-mario-yellow transition-colors"
                                 >
                                     {link.label}
                                 </a>
