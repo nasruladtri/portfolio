@@ -1,8 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { CTAButton } from "./CTAButton";
+
+const WHATSAPP_NUMBER = "6281234567890";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -10,6 +13,22 @@ const fadeUp = {
 };
 
 export const Footer = () => {
+    const [form, setForm] = useState({ name: "", phone: "", message: "" });
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const text = encodeURIComponent(
+            `Halo, saya ${form.name}.\n${form.phone ? `No. HP: ${form.phone}\n` : ""}${form.message}`
+        );
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank", "noopener,noreferrer");
+    };
+
     return (
         <>
             <section
@@ -34,6 +53,70 @@ export const Footer = () => {
                         Call to Action
                     </CTAButton>
                 </motion.div>
+
+                <motion.form
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}
+                    onSubmit={handleSubmit}
+                    className="max-w-xl mx-auto mt-16 text-left space-y-4"
+                >
+                    <div>
+                        <label htmlFor="contact-name" className="block text-sm font-medium mb-1.5 text-left">
+                            Nama Anda
+                        </label>
+                        <input
+                            id="contact-name"
+                            name="name"
+                            type="text"
+                            required
+                            value={form.name}
+                            onChange={handleChange}
+                            placeholder="Nama lengkap"
+                            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/30 text-white placeholder-white/50 outline-none focus:bg-white/20 focus:border-white transition-colors"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="contact-phone" className="block text-sm font-medium mb-1.5 text-left">
+                            No. WhatsApp <span className="text-white/50">(opsional)</span>
+                        </label>
+                        <input
+                            id="contact-phone"
+                            name="phone"
+                            type="tel"
+                            value={form.phone}
+                            onChange={handleChange}
+                            placeholder="08xx-xxxx-xxxx"
+                            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/30 text-white placeholder-white/50 outline-none focus:bg-white/20 focus:border-white transition-colors"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="contact-message" className="block text-sm font-medium mb-1.5 text-left">
+                            Pesan
+                        </label>
+                        <textarea
+                            id="contact-message"
+                            name="message"
+                            rows={4}
+                            required
+                            value={form.message}
+                            onChange={handleChange}
+                            placeholder="Ceritakan kebutuhan project Anda..."
+                            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/30 text-white placeholder-white/50 outline-none focus:bg-white/20 focus:border-white transition-colors resize-y"
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        className="w-full inline-flex items-center justify-center gap-2 font-bold text-lg px-8 py-3 rounded-lg bg-white text-secondary transition-all duration-300 hover:bg-secondary hover:text-white hover:border-2 hover:border-white"
+                    >
+                        <MessageCircle className="w-5 h-5" />
+                        Kirim via WhatsApp
+                    </button>
+                    <p className="text-sm text-white/60 text-center">
+                        Pesan akan terbuka di WhatsApp secara otomatis.
+                    </p>
+                </motion.form>
             </section>
 
             <footer className="bg-dark-grey text-white py-14">
@@ -64,6 +147,15 @@ export const Footer = () => {
                             aria-label="LinkedIn"
                         >
                             <Linkedin className="w-10 h-10" />
+                        </a>
+                        <a
+                            href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center text-white text-3xl w-16 h-16 transition-transform duration-200 hover:-translate-y-0.5"
+                            aria-label="WhatsApp"
+                        >
+                            <MessageCircle className="w-10 h-10" />
                         </a>
                         <a
                             href="mailto:nasruladitri2@gmail.com"
