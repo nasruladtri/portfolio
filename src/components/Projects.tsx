@@ -46,7 +46,7 @@ const projects: Project[] = [
         category: "Personal Website",
         description:
             "Website undangan pernikahan digital — cover interaktif, countdown menuju hari-H, detail akad & resepsi, galeri foto, form RSVP/ucapan, hingga amplop digital (DANA & QRIS). Dibangun dengan HTML, CSS, dan JavaScript murni.",
-        link: "https://undangan-by-nasrul-aditri.vercel.app/",
+        link: "https://preview-wedding-invitation.nasruladitri.space/",
         source: "https://github.com/nasruladtri/undangan",
         image: "/undangan-preview.png",
     },
