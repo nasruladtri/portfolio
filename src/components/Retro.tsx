@@ -100,15 +100,21 @@ export const PixelLogo = ({ size = 44 }: { size?: number }) => (
 );
 
 export const MarioRun = () => (
-    <div aria-hidden="true" className="fixed bottom-[22%] left-0 z-0 pointer-events-none mario-run">
+    <div aria-hidden="true" className="fixed bottom-8 left-0 z-0 pointer-events-none mario-run">
         <div className="flex flex-col items-center mario-bob">
-            <img
-                src="/kepala.png"
-                alt=""
-                className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover pixel-frame shrink-0"
-            />
-            <div className="w-10 h-9 md:w-11 md:h-10 bg-mario-red pixel-frame -mt-0.5" />
-            <div className="w-10 h-4 md:w-11 md:h-4 bg-mario-blue pixel-frame -mt-0.5" />
+            <div className="relative">
+                <img
+                    src="/kepala.png"
+                    alt=""
+                    className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover shrink-0"
+                />
+                <div className="absolute -top-0.5 left-0 w-full h-[45%] bg-mario-red rounded-t-full flex items-start justify-center pt-0.5">
+                    <span className="font-pixel text-[9px] md:text-[10px] text-white">M</span>
+                </div>
+                <div className="absolute bottom-0 right-[-12px] w-8 h-2.5 bg-mario-red rounded-r-sm" />
+            </div>
+            <div className="w-10 h-8 md:w-11 md:h-9 bg-mario-red -mt-0.5" />
+            <div className="w-10 h-4 md:w-11 md:h-4 bg-mario-blue -mt-0.5" />
             <div className="flex gap-3 -mt-0.5">
                 <div className="w-3 h-6 md:w-3.5 md:h-7 bg-mario-blue mario-leg-a" />
                 <div className="w-3 h-6 md:w-3.5 md:h-7 bg-mario-blue mario-leg-b" />
