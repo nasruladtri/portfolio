@@ -7,6 +7,7 @@ import { PixelLogo } from "./Retro";
 const navLinks = [
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
+    { label: "Gallery", href: "https://gallery.nasruladitri.space", external: true },
     { label: "Contact", href: "#contact" },
 ];
 
@@ -35,6 +36,8 @@ export const Navbar = () => {
                         <li key={link.href}>
                             <a
                                 href={link.href}
+                                target={link.external ? "_blank" : undefined}
+                                rel={link.external ? "noopener noreferrer" : undefined}
                                 className="pixel-outline hover:text-mario-yellow transition-colors"
                             >
                                 {link.label}
@@ -61,6 +64,8 @@ export const Navbar = () => {
                             <li key={link.href}>
                                 <a
                                     href={link.href}
+                                    target={link.external ? "_blank" : undefined}
+                                    rel={link.external ? "noopener noreferrer" : undefined}
                                     onClick={() => setOpen(false)}
                                     className="block px-3 py-3 font-pixel text-base text-white pixel-outline hover:text-mario-yellow transition-colors"
                                 >

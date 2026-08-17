@@ -50,6 +50,15 @@ const projects: Project[] = [
         source: "https://github.com/nasruladtri/undangan",
         image: "/undangan-preview.png",
     },
+    {
+        title: "Gallery",
+        category: "Photo Gallery",
+        description:
+            "Galeri karya — fotografi, hasil editan, dan desain grafis dengan filter kategori, lightbox, dan tema gelap modern. Dibangun dengan Next.js dan Tailwind CSS, di-deploy ke Vercel.",
+        link: "https://gallery.nasruladitri.space",
+        source: "https://github.com/nasruladtri/gallery",
+        image: "/gallery-preview.png",
+    },
 ];
 
 const fadeUp = {
