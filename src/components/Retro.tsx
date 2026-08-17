@@ -113,7 +113,17 @@ export const MarioRun = () => (
                 </div>
                 <div className="absolute bottom-0 right-[-12px] w-8 h-2.5 bg-mario-red rounded-r-sm" />
             </div>
-            <div className="w-10 h-8 md:w-11 md:h-9 bg-mario-red -mt-0.5" />
+            <div className="relative -mt-0.5">
+                <div className="absolute -top-2 -left-4 flex flex-col items-center">
+                    <div className="w-3 h-3 rounded-full bg-[#f6c391]" />
+                    <div className="w-2.5 h-6 bg-mario-red -mt-0.5" />
+                </div>
+                <div className="absolute -top-2 -right-4 flex flex-col items-center">
+                    <div className="w-3 h-3 rounded-full bg-[#f6c391]" />
+                    <div className="w-2.5 h-6 bg-mario-red -mt-0.5" />
+                </div>
+                <div className="w-10 h-8 md:w-11 md:h-9 bg-mario-red" />
+            </div>
             <div className="w-10 h-4 md:w-11 md:h-4 bg-mario-blue -mt-0.5" />
             <div className="flex gap-3 -mt-0.5">
                 <div className="w-3 h-6 md:w-3.5 md:h-7 bg-mario-blue mario-leg-a" />
@@ -171,7 +181,7 @@ export const RetroBackground = () => (
                 <PixelMushroom />
             </div>
 
-            <div className="absolute right-[6%] bottom-[15%] w-14 hidden md:block">
+            <div className="absolute right-[6%] bottom-8 w-14 hidden md:block">
                 <PixelPipe />
             </div>
 

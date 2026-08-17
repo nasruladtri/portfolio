@@ -93,16 +93,42 @@
 }
 
 @keyframes marioRun {
-  from {
-    transform: translateX(-200px);
+  0% {
+    transform: translate(-220px, 0);
+    opacity: 1;
   }
-  to {
-    transform: translateX(calc(100vw + 200px));
+  58% {
+    transform: translate(calc(94vw - 60px), 0);
+    opacity: 1;
+  }
+  66% {
+    transform: translate(calc(94vw - 60px), -165px);
+    opacity: 1;
+  }
+  72% {
+    transform: translate(calc(94vw - 60px), -94px);
+    opacity: 1;
+  }
+  78% {
+    transform: translate(calc(94vw - 60px), 60px);
+    opacity: 1;
+  }
+  82% {
+    transform: translate(calc(94vw - 60px), 60px);
+    opacity: 0;
+  }
+  85% {
+    transform: translate(-220px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-220px, 0);
+    opacity: 0;
   }
 }
 
 .mario-run {
-  animation: marioRun 16s linear infinite;
+  animation: marioRun 22s linear infinite;
 }
 
 @keyframes legSwingA {
