@@ -101,38 +101,11 @@ export const PixelLogo = ({ size = 44 }: { size?: number }) => (
 
 export const MarioRun = () => (
     <div aria-hidden="true" className="fixed bottom-8 left-0 z-0 pointer-events-none mario-run">
-        <div className="flex flex-col items-center mario-bob">
-            <div className="relative">
-                <img
-                    src="/kepala.png"
-                    alt=""
-                    className="w-14 h-14 md:w-16 md:h-16 object-cover shrink-0 pixelated"
-                />
-                <div className="absolute -top-0.5 left-0 w-full h-[40%] bg-mario-red flex items-start justify-center pt-1">
-                    <span className="font-pixel text-[9px] md:text-[10px] text-white">M</span>
-                </div>
-                <div className="absolute bottom-0 right-[-12px] w-9 h-3 bg-mario-red" />
-            </div>
-            <div className="relative -mt-0.5">
-                <div className="absolute -top-3 -left-5 w-3 h-10 bg-mario-red" />
-                <div className="absolute -top-3 -right-5 w-3 h-10 bg-mario-red" />
-                <div className="absolute -top-1 -left-6 w-4 h-3 bg-[#f6c391]" />
-                <div className="absolute -top-1 -right-6 w-4 h-3 bg-[#f6c391]" />
-                <div className="w-11 h-7 md:w-12 md:h-8 bg-mario-red" />
-            </div>
-            <div className="relative w-11 h-5 md:w-12 md:h-6 bg-mario-blue -mt-0.5">
-                <div className="absolute -top-1.5 left-2 w-1.5 h-1.5 bg-mario-yellow" />
-                <div className="absolute -top-1.5 right-2 w-1.5 h-1.5 bg-mario-yellow" />
-            </div>
-            <div className="flex gap-4 -mt-0.5">
-                <div className="w-3 h-5 md:w-3.5 md:h-6 bg-mario-blue mario-leg-a" />
-                <div className="w-3 h-5 md:w-3.5 md:h-6 bg-mario-blue mario-leg-b" />
-            </div>
-            <div className="flex gap-1 -mt-0.5">
-                <div className="w-6 h-3 md:w-7 md:h-3.5 bg-mario-brown mario-leg-a" />
-                <div className="w-6 h-3 md:w-7 md:h-3.5 bg-mario-brown mario-leg-b" />
-            </div>
-        </div>
+        <img
+            src="/mario.png"
+            alt=""
+            className="w-16 h-16 md:w-20 md:h-20 object-contain shrink-0 pixelated mario-bob"
+        />
     </div>
 );
 
