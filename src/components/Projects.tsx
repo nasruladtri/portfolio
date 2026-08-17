@@ -88,7 +88,7 @@ export const Projects = () => {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
                     variants={fadeUp}
-                    className="font-retro text-2xl text-white/90 mb-14"
+                    className="font-retro text-2xl text-white/90 mb-8"
                 >
                     +100 pts — level completed!
                 </motion.p>
