@@ -8,11 +8,13 @@ const fadeUp = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 };
 
+const techChips = ["React", "Next.js", "Laravel", "TypeScript", "Tailwind CSS"];
+
 export const Hero = () => {
     return (
         <section
             id="top"
-            className="min-h-screen flex items-center bg-white text-heading px-6"
+            className="min-h-screen flex items-center px-6"
         >
             <div className="container max-w-5xl">
                 <motion.h1
@@ -38,7 +40,24 @@ export const Hero = () => {
                     animate="visible"
                     variants={fadeUp}
                     transition={{ delay: 0.25 }}
-                    className="mt-8"
+                    className="mt-10 flex flex-wrap items-center gap-3"
+                >
+                    {techChips.map((chip) => (
+                        <span
+                            key={chip}
+                            className="glass-chip px-4 py-1.5 text-sm font-medium text-heading/80"
+                        >
+                            {chip}
+                        </span>
+                    ))}
+                </motion.div>
+
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeUp}
+                    transition={{ delay: 0.35 }}
+                    className="mt-10"
                 >
                     <CTAButton href="#about">Know more</CTAButton>
                 </motion.div>

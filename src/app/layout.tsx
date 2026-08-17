@@ -129,8 +129,15 @@ export default function RootLayout({
                     "antialiased min-h-screen flex flex-col"
                 )}
             >
+                <div aria-hidden="true" className="fixed inset-0 z-0">
+                    <div className="blob w-[500px] h-[500px] bg-[#8E2DE2]/25 -top-32 -left-32" />
+                    <div className="blob w-[450px] h-[450px] bg-[#4A00E0]/20 top-1/3 -right-24" style={{ animationDelay: "-6s" }} />
+                    <div className="blob w-[420px] h-[420px] bg-[#ec4899]/15 bottom-0 left-1/4" style={{ animationDelay: "-12s" }} />
+                </div>
                 <Navbar />
-                {children}
+                <div className="relative z-10 flex-1">
+                    {children}
+                </div>
             </body>
         </html>
     );

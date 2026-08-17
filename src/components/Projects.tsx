@@ -74,7 +74,7 @@ export const Projects = () => {
     return (
         <section
             id="projects"
-            className="bg-white text-heading lg:-mt-40 lg:pt-56 pt-20 px-6 pb-16 lg:pb-48"
+            className="px-6 py-20"
         >
             <div className="container max-w-6xl">
                 <motion.h2
@@ -87,22 +87,20 @@ export const Projects = () => {
                     Projects
                 </motion.h2>
 
-                <div className="space-y-24 md:space-y-32">
+                <div className="space-y-16 md:space-y-20">
                     {projects.map((project, index) => (
-                        <div
+                        <motion.div
                             key={project.title}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.15 }}
+                            variants={fadeUp}
                             className={clsx(
-                                "grid md:grid-cols-12 gap-8 items-center",
+                                "glass p-6 md:p-10 grid md:grid-cols-12 gap-8 items-center",
                                 index % 2 === 1 && "md:[&>*:first-child]:order-2"
                             )}
                         >
-                            <motion.div
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true, amount: 0.2 }}
-                                variants={fadeUp}
-                                className="md:col-span-4"
-                            >
+                            <motion.div className="md:col-span-4">
                                 <span className="text-sm font-bold uppercase tracking-wider text-secondary">
                                     {project.category}
                                 </span>
@@ -147,7 +145,7 @@ export const Projects = () => {
                                     <ProjectImage project={project} />
                                 </a>
                             </motion.div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
