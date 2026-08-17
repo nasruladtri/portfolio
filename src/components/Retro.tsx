@@ -106,28 +106,31 @@ export const MarioRun = () => (
                 <img
                     src="/kepala.png"
                     alt=""
-                    className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover shrink-0"
+                    className="w-14 h-14 md:w-16 md:h-16 object-cover shrink-0 pixelated"
                 />
-                <div className="absolute -top-0.5 left-0 w-full h-[45%] bg-mario-red rounded-t-full flex items-start justify-center pt-0.5">
+                <div className="absolute -top-0.5 left-0 w-full h-[40%] bg-mario-red flex items-start justify-center pt-1">
                     <span className="font-pixel text-[9px] md:text-[10px] text-white">M</span>
                 </div>
-                <div className="absolute bottom-0 right-[-12px] w-8 h-2.5 bg-mario-red rounded-r-sm" />
+                <div className="absolute bottom-0 right-[-12px] w-9 h-3 bg-mario-red" />
             </div>
             <div className="relative -mt-0.5">
-                <div className="absolute -top-2 -left-4 flex flex-col items-center">
-                    <div className="w-3 h-3 rounded-full bg-[#f6c391]" />
-                    <div className="w-2.5 h-6 bg-mario-red -mt-0.5" />
-                </div>
-                <div className="absolute -top-2 -right-4 flex flex-col items-center">
-                    <div className="w-3 h-3 rounded-full bg-[#f6c391]" />
-                    <div className="w-2.5 h-6 bg-mario-red -mt-0.5" />
-                </div>
-                <div className="w-10 h-8 md:w-11 md:h-9 bg-mario-red" />
+                <div className="absolute -top-3 -left-5 w-3 h-10 bg-mario-red" />
+                <div className="absolute -top-3 -right-5 w-3 h-10 bg-mario-red" />
+                <div className="absolute -top-1 -left-6 w-4 h-3 bg-[#f6c391]" />
+                <div className="absolute -top-1 -right-6 w-4 h-3 bg-[#f6c391]" />
+                <div className="w-11 h-7 md:w-12 md:h-8 bg-mario-red" />
             </div>
-            <div className="w-10 h-4 md:w-11 md:h-4 bg-mario-blue -mt-0.5" />
-            <div className="flex gap-3 -mt-0.5">
-                <div className="w-3 h-6 md:w-3.5 md:h-7 bg-mario-blue mario-leg-a" />
-                <div className="w-3 h-6 md:w-3.5 md:h-7 bg-mario-blue mario-leg-b" />
+            <div className="relative w-11 h-5 md:w-12 md:h-6 bg-mario-blue -mt-0.5">
+                <div className="absolute -top-1.5 left-2 w-1.5 h-1.5 bg-mario-yellow" />
+                <div className="absolute -top-1.5 right-2 w-1.5 h-1.5 bg-mario-yellow" />
+            </div>
+            <div className="flex gap-4 -mt-0.5">
+                <div className="w-3 h-5 md:w-3.5 md:h-6 bg-mario-blue mario-leg-a" />
+                <div className="w-3 h-5 md:w-3.5 md:h-6 bg-mario-blue mario-leg-b" />
+            </div>
+            <div className="flex gap-1 -mt-0.5">
+                <div className="w-6 h-3 md:w-7 md:h-3.5 bg-mario-brown mario-leg-a" />
+                <div className="w-6 h-3 md:w-7 md:h-3.5 bg-mario-brown mario-leg-b" />
             </div>
         </div>
     </div>
