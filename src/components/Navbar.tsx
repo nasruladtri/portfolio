@@ -14,7 +14,7 @@ export const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 inset-x-0 z-50 bg-mario-dark border-b-4 border-black">
+        <header className="fixed top-0 inset-x-0 z-50 brick-pattern border-b-4 border-black">
             <nav className="container max-w-5xl px-6 py-3 flex items-center justify-between">
                 <a
                     href="#top"
@@ -25,21 +25,21 @@ export const Navbar = () => {
                     <Image
                         src="/logo.png"
                         alt="Logo Nasrul Aditri Rahmandika"
-                        width={40}
-                        height={40}
-                        className="w-10 h-10 object-cover pixelated pixel-frame"
+                        width={44}
+                        height={44}
+                        className="w-11 h-11 object-cover pixelated pixel-frame"
                     />
-                    <span className="font-pixel text-[10px] md:text-xs text-white">
+                    <span className="font-pixel text-sm md:text-base text-white pixel-outline">
                         N.<span className="text-mario-yellow">ADITRI</span>
                     </span>
                 </a>
 
-                <ul className="hidden sm:flex items-center gap-6 font-pixel text-[10px] text-white">
+                <ul className="hidden sm:flex items-center gap-7 font-pixel text-xs md:text-sm text-white">
                     {navLinks.map((link) => (
                         <li key={link.href}>
                             <a
                                 href={link.href}
-                                className="hover:text-mario-yellow transition-colors"
+                                className="pixel-outline hover:text-mario-yellow transition-colors"
                             >
                                 {link.label}
                             </a>
@@ -54,19 +54,19 @@ export const Navbar = () => {
                     aria-label={open ? "Tutup menu" : "Buka menu"}
                     aria-expanded={open}
                 >
-                    {open ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+                    {open ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
                 </button>
             </nav>
 
             {open && (
-                <div className="sm:hidden border-t-4 border-black bg-mario-dark">
+                <div className="sm:hidden border-t-4 border-black brick-pattern">
                     <ul className="container max-w-5xl px-6 py-4 flex flex-col gap-1">
                         {navLinks.map((link) => (
                             <li key={link.href}>
                                 <a
                                     href={link.href}
                                     onClick={() => setOpen(false)}
-                                    className="block px-3 py-3 font-pixel text-[10px] text-white hover:text-mario-yellow transition-colors"
+                                    className="block px-3 py-3 font-pixel text-sm text-white pixel-outline hover:text-mario-yellow transition-colors"
                                 >
                                     {link.label}
                                 </a>
