@@ -38,6 +38,7 @@ const projects: Project[] = [
         description:
             "Website bisnis untuk Warung Pecel Yu Mur — landing page modern untuk memperkenalkan menu, lokasi, dan informasi pemesanan, dikembangkan dengan React dan di-deploy ke Vercel.",
         link: "https://warung-pecel-yumur.vercel.app/",
+        source: "https://github.com/nasruladtri/warung-pecel-yumur",
         image: "/warung_yumur-preview.png",
     },
     {
