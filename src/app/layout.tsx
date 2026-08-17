@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Press_Start_2P, VT323 } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import { Navbar } from "@/components/Navbar";
+import { RetroBackground } from "@/components/Retro";
 
-const montserrat = Montserrat({
+const pixel = Press_Start_2P({
+    weight: "400",
     subsets: ["latin"],
-    variable: "--font-montserrat",
+    variable: "--font-pixel",
+});
+
+const retro = VT323({
+    weight: "400",
+    subsets: ["latin"],
+    variable: "--font-retro",
 });
 
 const SITE_URL = "https://www.nasruladitri.space";
@@ -125,15 +133,12 @@ export default function RootLayout({
             </head>
             <body
                 className={clsx(
-                    montserrat.variable,
+                    pixel.variable,
+                    retro.variable,
                     "antialiased min-h-screen flex flex-col"
                 )}
             >
-                <div aria-hidden="true" className="fixed inset-0 z-0">
-                    <div className="blob w-[500px] h-[500px] bg-[#8E2DE2]/25 -top-32 -left-32" />
-                    <div className="blob w-[450px] h-[450px] bg-[#4A00E0]/20 top-1/3 -right-24" style={{ animationDelay: "-6s" }} />
-                    <div className="blob w-[420px] h-[420px] bg-[#ec4899]/15 bottom-0 left-1/4" style={{ animationDelay: "-12s" }} />
-                </div>
+                <RetroBackground />
                 <Navbar />
                 <div className="relative z-10 flex-1">
                     {children}

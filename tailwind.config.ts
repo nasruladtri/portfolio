@@ -11,12 +11,21 @@ export default {
             colors: {
                 primary: "#8E2DE2",
                 secondary: "#4A00E0",
-                heading: "#2D1B4E",
+                heading: "#222222",
                 "dark-grey": "#333333",
                 "light-grey": "#d2d2d2",
+                "mario-red": "#E52521",
+                "mario-green": "#00A800",
+                "mario-blue": "#1F4FD8",
+                "mario-sky": "#6AB8FF",
+                "mario-yellow": "#FFD700",
+                "mario-brown": "#8B5A2B",
+                "mario-dark": "#1A1A1A",
             },
             fontFamily: {
                 sans: ["var(--font-montserrat)"],
+                pixel: ["var(--font-pixel)"],
+                retro: ["var(--font-retro)"],
             },
             container: {
                 center: true,

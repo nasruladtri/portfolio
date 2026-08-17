@@ -14,7 +14,7 @@ export const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 inset-x-0 z-50 bg-white/40 backdrop-blur-xl border-b border-white/60">
+        <header className="fixed top-0 inset-x-0 z-50 bg-mario-dark border-b-4 border-black">
             <nav className="container max-w-5xl px-6 py-3 flex items-center justify-between">
                 <a
                     href="#top"
@@ -25,21 +25,21 @@ export const Navbar = () => {
                     <Image
                         src="/logo.png"
                         alt="Logo Nasrul Aditri Rahmandika"
-                        width={44}
-                        height={44}
-                        className="w-11 h-11 rounded-full object-cover"
+                        width={40}
+                        height={40}
+                        className="w-10 h-10 object-cover pixelated pixel-frame"
                     />
-                    <span className="font-bold text-heading">
-                        Nasrul<span className="text-primary">Aditri</span>
+                    <span className="font-pixel text-[10px] md:text-xs text-white">
+                        N.<span className="text-mario-yellow">ADITRI</span>
                     </span>
                 </a>
 
-                <ul className="hidden sm:flex items-center gap-6 text-sm font-medium text-heading">
+                <ul className="hidden sm:flex items-center gap-6 font-pixel text-[10px] text-white">
                     {navLinks.map((link) => (
                         <li key={link.href}>
                             <a
                                 href={link.href}
-                                className="hover:text-primary transition-colors"
+                                className="hover:text-mario-yellow transition-colors"
                             >
                                 {link.label}
                             </a>
@@ -50,7 +50,7 @@ export const Navbar = () => {
                 <button
                     type="button"
                     onClick={() => setOpen(!open)}
-                    className="sm:hidden text-heading p-2 -mr-2"
+                    className="sm:hidden text-white p-2 -mr-2"
                     aria-label={open ? "Tutup menu" : "Buka menu"}
                     aria-expanded={open}
                 >
@@ -59,14 +59,14 @@ export const Navbar = () => {
             </nav>
 
             {open && (
-                <div className="sm:hidden border-t border-white/60 bg-white/60 backdrop-blur-xl">
+                <div className="sm:hidden border-t-4 border-black bg-mario-dark">
                     <ul className="container max-w-5xl px-6 py-4 flex flex-col gap-1">
                         {navLinks.map((link) => (
                             <li key={link.href}>
                                 <a
                                     href={link.href}
                                     onClick={() => setOpen(false)}
-                                    className="block px-3 py-3 text-base font-medium text-heading hover:text-primary hover:bg-light-grey/20 rounded-lg transition-colors"
+                                    className="block px-3 py-3 font-pixel text-[10px] text-white hover:text-mario-yellow transition-colors"
                                 >
                                     {link.label}
                                 </a>

@@ -59,7 +59,7 @@ const fadeUp = {
 
 const ProjectImage = ({ project }: { project: Project }) => {
     return (
-        <div className="relative aspect-video overflow-hidden rounded-lg shadow-[0_6px_10px_rgba(0,0,0,0.08),0_0_6px_rgba(0,0,0,0.05)] transition-transform duration-500 hover:scale-[1.02]">
+        <div className="relative aspect-video overflow-hidden pixel-frame pixel-shadow-sm bg-black">
             <Image
                 src={project.image!}
                 alt={project.title}
@@ -72,20 +72,26 @@ const ProjectImage = ({ project }: { project: Project }) => {
 
 export const Projects = () => {
     return (
-        <section
-            id="projects"
-            className="px-6 py-20"
-        >
+        <section id="projects" className="px-6 py-20">
             <div className="container max-w-6xl">
                 <motion.h2
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
                     variants={fadeUp}
-                    className="text-4xl md:text-5xl font-bold uppercase mb-16"
+                    className="font-pixel text-base md:text-xl text-white mb-4 [text-shadow:4px_4px_0_#000]"
                 >
-                    Projects
+                    PROJECTS
                 </motion.h2>
+                <motion.p
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}
+                    className="font-retro text-2xl text-white/90 mb-14"
+                >
+                    +100 pts — level completed!
+                </motion.p>
 
                 <div className="space-y-16 md:space-y-20">
                     {projects.map((project, index) => (
@@ -96,32 +102,26 @@ export const Projects = () => {
                             viewport={{ once: true, amount: 0.15 }}
                             variants={fadeUp}
                             className={clsx(
-                                "glass p-6 md:p-10 grid md:grid-cols-12 gap-8 items-center",
+                                "bg-[#fffdf5] text-black pixel-frame pixel-shadow p-6 md:p-10 grid md:grid-cols-12 gap-8 items-center",
                                 index % 2 === 1 && "md:[&>*:first-child]:order-2"
                             )}
                         >
                             <motion.div className="md:col-span-4">
-                                <span className="text-sm font-bold uppercase tracking-wider text-secondary">
-                                    {project.category}
+                                <span className="inline-block font-pixel text-[8px] md:text-[9px] bg-mario-green text-white pixel-frame px-2 py-1.5 mb-4">
+                                    {project.category.toUpperCase()}
                                 </span>
-                                <h3 className="text-2xl md:text-3xl font-bold mb-4 mt-2">
+                                <h3 className="font-pixel text-sm md:text-base text-mario-red mb-4 mt-3 [text-shadow:2px_2px_0_#000]">
                                     {project.title}
                                 </h3>
-                                <p className="text-base leading-relaxed mb-6 text-heading/80">
+                                <p className="font-retro text-xl leading-snug mb-6 text-black/80">
                                     {project.description}
                                 </p>
-                                <div className="flex flex-wrap items-center gap-8">
-                                    <CTAButton
-                                        href={project.link}
-                                        variant="gradient"
-                                    >
+                                <div className="flex flex-wrap items-center gap-6">
+                                    <CTAButton href={project.link} variant="gradient">
                                         See Live
                                     </CTAButton>
                                     {project.source && (
-                                        <CTAButton
-                                            href={project.source}
-                                            variant="text-link"
-                                        >
+                                        <CTAButton href={project.source} variant="text-link">
                                             Source Code
                                         </CTAButton>
                                     )}

@@ -2,37 +2,41 @@
 
 import { motion } from "framer-motion";
 import { CTAButton } from "./CTAButton";
+import { PixelCoin, PixelQuestionBlock } from "./Retro";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 };
 
-const techChips = ["React", "Next.js", "Laravel", "TypeScript", "Tailwind CSS"];
+const techChips = ["React", "Next.js", "Laravel", "TypeScript", "Tailwind"];
 
 export const Hero = () => {
     return (
-        <section
-            id="top"
-            className="min-h-screen flex items-center px-6"
-        >
+        <section id="top" className="relative min-h-screen flex items-center px-6 pt-20 pb-12">
             <div className="container max-w-5xl">
                 <motion.h1
                     initial="hidden"
                     animate="visible"
                     variants={fadeUp}
-                    className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight"
+                    className="leading-tight"
                 >
-                    Hi, my name is{" "}
-                    <span className="bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
-                        Nasrul Aditri Rahmandika
+                    <span className="block font-pixel text-[9px] sm:text-[11px] text-white [text-shadow:3px_3px_0_#000] mb-5">
+                        HI, MY NAME IS
                     </span>
-                    <br />
-                    I'm the{" "}
-                    <span className="bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
-                        Creative Web Developer
+                    <span className="block font-pixel text-base sm:text-xl md:text-2xl text-mario-red [text-shadow:4px_4px_0_#000] mb-6">
+                        NASRUL ADITRI
+                        <br />
+                        RAHMANDIKA
                     </span>
-                    .
+                    <span className="block font-pixel text-[9px] sm:text-[11px] text-white [text-shadow:3px_3px_0_#000] mb-3">
+                        I'M THE
+                    </span>
+                    <span className="block font-pixel text-sm sm:text-lg md:text-xl text-mario-yellow [text-shadow:4px_4px_0_#000]">
+                        CREATIVE WEB
+                        <br />
+                        DEVELOPER
+                    </span>
                 </motion.h1>
 
                 <motion.div
@@ -45,7 +49,7 @@ export const Hero = () => {
                     {techChips.map((chip) => (
                         <span
                             key={chip}
-                            className="glass-chip px-4 py-1.5 text-sm font-medium text-heading/80"
+                            className="font-pixel text-[9px] text-black bg-white pixel-frame px-3 py-2 pixel-shadow-sm"
                         >
                             {chip}
                         </span>
@@ -57,10 +61,22 @@ export const Hero = () => {
                     animate="visible"
                     variants={fadeUp}
                     transition={{ delay: 0.35 }}
-                    className="mt-10"
+                    className="mt-10 flex flex-wrap items-center gap-6"
                 >
-                    <CTAButton href="#about">Know more</CTAButton>
+                    <CTAButton href="#about" variant="gradient">
+                        Press Start
+                    </CTAButton>
+                    <span className="w-10 coin-anim">
+                        <PixelCoin />
+                    </span>
                 </motion.div>
+            </div>
+
+            <div aria-hidden="true" className="absolute top-36 right-8 hidden md:block w-16">
+                <PixelQuestionBlock />
+            </div>
+            <div aria-hidden="true" className="absolute bottom-32 left-6 hidden lg:block w-10 coin-anim">
+                <PixelCoin />
             </div>
         </section>
     );

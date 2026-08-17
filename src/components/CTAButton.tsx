@@ -7,7 +7,6 @@ type CTAButtonProps = {
     children: React.ReactNode;
     variant?: "gradient" | "outline" | "text-link";
     className?: string;
-    onClick?: () => void;
 };
 
 export const CTAButton = ({
@@ -15,15 +14,13 @@ export const CTAButton = ({
     children,
     variant = "gradient",
     className,
-    onClick,
 }: CTAButtonProps) => {
     if (variant === "outline") {
         return (
             <a
                 href={href}
-                onClick={onClick}
                 className={clsx(
-                    "inline-block font-bold text-lg px-8 py-3 border-2 border-white text-white transition-all duration-300 hover:bg-white hover:text-secondary",
+                    "pixel-btn bg-mario-green text-white shadow-[6px_6px_0_#000]",
                     className
                 )}
             >
@@ -36,9 +33,8 @@ export const CTAButton = ({
         return (
             <a
                 href={href}
-                onClick={onClick}
                 className={clsx(
-                    "inline-block font-bold text-lg bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent hover:translate-x-0.5 transition-transform",
+                    "inline-block font-pixel uppercase tracking-wide text-[10px] text-black border-b-4 border-black hover:text-mario-red hover:border-mario-red transition-colors",
                     className
                 )}
             >
@@ -48,19 +44,14 @@ export const CTAButton = ({
     }
 
     return (
-        <span
+        <a
+            href={href}
             className={clsx(
-                "inline-block p-[2px] bg-gradient-to-br from-primary to-secondary",
+                "pixel-btn bg-mario-red text-white shadow-[6px_6px_0_#000]",
                 className
             )}
         >
-            <a
-                href={href}
-                onClick={onClick}
-                className="inline-block font-bold text-lg px-8 py-3 bg-white text-secondary transition-all duration-300 hover:bg-transparent hover:text-white"
-            >
-                {children}
-            </a>
-        </span>
+            {children}
+        </a>
     );
 };
