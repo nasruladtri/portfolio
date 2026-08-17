@@ -98,22 +98,22 @@
     animation-timing-function: linear;
   }
   55% {
-    transform: translate(calc(94vw - 88px), 0);
+    transform: translate(calc(96vw - 88px), 0);
     animation-timing-function: ease-out;
   }
   60% {
-    transform: translate(calc(94vw - 88px), -190px);
+    transform: translate(calc(96vw - 88px), -190px);
     animation-timing-function: ease-in;
   }
   63% {
-    transform: translate(calc(94vw - 88px), -160px);
+    transform: translate(calc(96vw - 88px), -160px);
     animation-timing-function: ease-in-out;
   }
-  72% {
-    transform: translate(calc(94vw - 88px), 0);
+  67% {
+    transform: translate(calc(96vw - 88px), 0);
     animation-timing-function: linear;
   }
-  75% {
+  70% {
     transform: translate(-220px, 0);
   }
   100% {
