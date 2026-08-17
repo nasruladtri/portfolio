@@ -53,8 +53,8 @@ export const PixelQuestionBlock = () => (
 
 export const PixelPipe = () => (
     <svg viewBox="0 0 48 80" width="100%" preserveAspectRatio="none" aria-hidden="true">
-        <rect x="4" y="32" width="40" height="8" fill="#3fae3f" stroke="#000" strokeWidth="3" />
-        <rect x="6" y="40" width="36" height="40" fill="#3fae3f" stroke="#000" strokeWidth="3" />
+        <rect x="4" y="32" width="40" height="8" fill="#3fae3f" stroke="#000" strokeWidth="2" />
+        <rect x="6" y="40" width="36" height="40" fill="#3fae3f" stroke="#000" strokeWidth="2" />
         <rect x="8" y="34" width="14" height="4" fill="#7edb7e" />
         <rect x="9" y="43" width="10" height="10" fill="#2b8a2b" />
     </svg>
