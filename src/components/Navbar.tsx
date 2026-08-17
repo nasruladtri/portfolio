@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -22,13 +21,6 @@ export const Navbar = () => {
                     aria-label="Nasrul Aditri Rahmandika"
                     onClick={() => setOpen(false)}
                 >
-                    <Image
-                        src="/logo.png"
-                        alt="Logo Nasrul Aditri Rahmandika"
-                        width={44}
-                        height={44}
-                        className="w-11 h-11 object-cover pixelated pixel-frame hidden"
-                    />
                     <span className="font-pixel text-sm md:text-base text-white pixel-outline">
                         NASRUL <span className="text-mario-yellow">ADITRI</span>
                     </span>
