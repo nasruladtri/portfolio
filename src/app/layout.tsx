@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     authors: [{ name: "Nasrul Aditri Rahmandika", url: SITE_URL }],
     creator: "Nasrul Aditri Rahmandika",
     icons: {
-        icon: [{ url: "/favicon.ico", type: "image/x-icon" }, { url: "/logo.png", type: "image/png" }],
+        icon: [{ url: "/icon.png", type: "image/png" }, { url: "/favicon.ico", type: "image/x-icon" }],
         apple: [{ url: "/apple-icon.png", type: "image/png" }],
     },
     openGraph: {
