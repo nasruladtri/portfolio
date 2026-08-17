@@ -14,7 +14,7 @@ export const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 inset-x-0 z-50 bg-mario-dark border-b-4 border-black">
+        <header className="fixed top-0 inset-x-0 z-50 bg-mario-red border-b-4 border-black">
             <nav className="container max-w-5xl px-6 py-4 flex items-center justify-between">
                 <a
                     href="#top"
@@ -55,7 +55,7 @@ export const Navbar = () => {
             </nav>
 
             {open && (
-                <div className="sm:hidden border-t-4 border-black bg-mario-dark">
+                <div className="sm:hidden border-t-4 border-black bg-mario-red">
                     <ul className="container max-w-5xl px-6 py-4 flex flex-col gap-1">
                         {navLinks.map((link) => (
                             <li key={link.href}>
