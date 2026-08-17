@@ -14,7 +14,7 @@ export const Footer = () => {
         <>
             <section
                 id="contact"
-                className="bg-gradient-to-br from-primary to-secondary text-white text-center px-6 py-20 lg:pt-56 lg:pb-28 lg:-mt-40 lg:[clip-path:polygon(0_15vh,100%_0,100%_100%,0_100%)]"
+                className="bg-gradient-to-br from-primary to-secondary text-white text-center px-6 py-20 lg:pt-56 lg:pb-28 lg:-mt-24 lg:[clip-path:polygon(0_15vh,100%_0,100%_100%,0_100%)]"
             >
                 <motion.div
                     initial="hidden"

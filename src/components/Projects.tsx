@@ -73,7 +73,7 @@ export const Projects = () => {
     return (
         <section
             id="projects"
-            className="bg-white text-heading lg:-mt-40 lg:pt-56 pt-20 px-6"
+            className="bg-white text-heading lg:-mt-40 lg:pt-56 pt-20 px-6 pb-16 lg:pb-48"
         >
             <div className="container max-w-6xl">
                 <motion.h2
