@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { PixelCoin } from "./Retro";
+import { PixelLogo } from "./Retro";
 
 const navLinks = [
     { label: "About", href: "#about" },
@@ -22,11 +22,11 @@ export const Navbar = () => {
                     aria-label="Nasrul Aditri Rahmandika"
                     onClick={() => setOpen(false)}
                 >
-                    <span className="w-7 h-7 shrink-0 coin-anim">
-                        <PixelCoin />
+                    <span className="shrink-0 pixel-shadow-sm">
+                        <PixelLogo size={40} />
                     </span>
-                    <span className="font-pixel text-xs md:text-sm text-black bg-mario-yellow pixel-frame px-3 py-2 pixel-shadow-sm">
-                        NASRUL <span className="text-mario-red">ADITRI</span>
+                    <span className="font-pixel text-xs md:text-sm text-white pixel-outline">
+                        NASRUL <span className="text-mario-yellow">ADITRI</span>
                     </span>
                 </a>
 
