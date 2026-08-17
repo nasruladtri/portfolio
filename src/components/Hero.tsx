@@ -21,18 +21,18 @@ export const Hero = () => {
                     variants={fadeUp}
                     className="leading-tight"
                 >
-                    <span className="block font-pixel text-[9px] sm:text-[11px] text-white [text-shadow:3px_3px_0_#000] mb-5">
+                    <span className="block font-pixel text-[10px] sm:text-xs text-white pixel-outline mb-5">
                         HI, MY NAME IS
                     </span>
-                    <span className="block font-pixel text-base sm:text-xl md:text-2xl text-mario-red [text-shadow:4px_4px_0_#000] mb-6">
+                    <span className="block font-pixel text-base sm:text-2xl md:text-3xl text-white pixel-outline-lg mb-6">
                         NASRUL ADITRI
                         <br />
                         RAHMANDIKA
                     </span>
-                    <span className="block font-pixel text-[9px] sm:text-[11px] text-white [text-shadow:3px_3px_0_#000] mb-3">
+                    <span className="block font-pixel text-[10px] sm:text-xs text-white pixel-outline mb-3">
                         I'M THE
                     </span>
-                    <span className="block font-pixel text-sm sm:text-lg md:text-xl text-mario-yellow [text-shadow:4px_4px_0_#000]">
+                    <span className="block font-pixel text-sm sm:text-xl md:text-2xl text-mario-yellow pixel-outline-lg">
                         CREATIVE WEB
                         <br />
                         DEVELOPER

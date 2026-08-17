@@ -79,7 +79,7 @@ export const Projects = () => {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
                     variants={fadeUp}
-                    className="font-pixel text-base md:text-xl text-white mb-4 [text-shadow:4px_4px_0_#000]"
+                    className="font-pixel text-base md:text-xl text-white mb-4 pixel-outline"
                 >
                     PROJECTS
                 </motion.h2>
