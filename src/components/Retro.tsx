@@ -104,7 +104,7 @@ export const MarioRun = () => (
         <img
             src="/mario.png"
             alt=""
-            className="w-16 h-16 md:w-20 md:h-20 object-contain shrink-0 pixelated mario-bob"
+            className="w-10 h-10 md:w-20 md:h-20 object-contain shrink-0 pixelated mario-bob"
         />
     </div>
 );
@@ -177,7 +177,7 @@ export const RetroBackground = () => (
             </div>
         </div>
         <MarioRun />
-        <div aria-hidden="true" className="fixed right-[4%] bottom-8 w-24 hidden md:block pointer-events-none">
+        <div aria-hidden="true" className="fixed right-[4%] bottom-8 w-12 md:w-24 pointer-events-none">
             <PixelPipe />
         </div>
         <div aria-hidden="true" className="fixed bottom-0 inset-x-0 z-0 h-8 pointer-events-none">
