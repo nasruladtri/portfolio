@@ -92,6 +92,63 @@
   animation: coinBounce 1.6s ease-in-out infinite;
 }
 
+@keyframes marioRun {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(calc(100vw + 200px));
+  }
+}
+
+.mario-run {
+  animation: marioRun 16s linear infinite;
+}
+
+@keyframes legSwingA {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(35deg);
+  }
+}
+
+@keyframes legSwingB {
+  0%,
+  100% {
+    transform: rotate(35deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+.mario-leg-a {
+  transform-origin: top center;
+  animation: legSwingA 0.45s linear infinite;
+}
+
+.mario-leg-b {
+  transform-origin: top center;
+  animation: legSwingB 0.45s linear infinite;
+}
+
+@keyframes marioBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.mario-bob {
+  animation: marioBob 0.45s linear infinite;
+}
+
 .pixel-outline {
   text-shadow:
     3px 0 0 #000,

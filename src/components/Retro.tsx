@@ -99,6 +99,24 @@ export const PixelLogo = ({ size = 44 }: { size?: number }) => (
     </svg>
 );
 
+export const MarioRun = () => (
+    <div aria-hidden="true" className="fixed bottom-[22%] left-0 z-0 pointer-events-none mario-run">
+        <div className="flex flex-col items-center mario-bob">
+            <img
+                src="/kepala.png"
+                alt=""
+                className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover pixel-frame shrink-0"
+            />
+            <div className="w-10 h-9 md:w-11 md:h-10 bg-mario-red pixel-frame -mt-0.5" />
+            <div className="w-10 h-4 md:w-11 md:h-4 bg-mario-blue pixel-frame -mt-0.5" />
+            <div className="flex gap-3 -mt-0.5">
+                <div className="w-3 h-6 md:w-3.5 md:h-7 bg-mario-blue mario-leg-a" />
+                <div className="w-3 h-6 md:w-3.5 md:h-7 bg-mario-blue mario-leg-b" />
+            </div>
+        </div>
+    </div>
+);
+
 export const RetroBackground = () => (
     <>
         <div aria-hidden="true" className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
@@ -170,6 +188,7 @@ export const RetroBackground = () => (
                 <PixelHill />
             </div>
         </div>
+        <MarioRun />
         <div aria-hidden="true" className="fixed bottom-0 inset-x-0 z-0 h-8 pointer-events-none">
             <div className="h-4 bg-mario-green border-t-4 border-black" />
             <div className="h-4 ground-pattern" />
