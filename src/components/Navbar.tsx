@@ -14,7 +14,7 @@ export const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 inset-x-0 z-50 bg-transparent backdrop-blur-md border-b-2 border-white/30">
+        <header className="fixed top-0 inset-x-0 z-50 bg-transparent">
             <nav className="container max-w-5xl px-6 py-4 flex items-center justify-between">
                 <a
                     href="#top"
@@ -55,7 +55,7 @@ export const Navbar = () => {
             </nav>
 
             {open && (
-                <div className="sm:hidden border-t-2 border-white/30 bg-white/40 backdrop-blur-xl">
+                <div className="sm:hidden bg-transparent">
                     <ul className="container max-w-5xl px-6 py-4 flex flex-col gap-1">
                         {navLinks.map((link) => (
                             <li key={link.href}>
