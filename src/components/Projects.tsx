@@ -64,7 +64,7 @@ const projects: Project[] = [
         category: "Health App",
         description:
             "Aplikasi berhenti merokok bergaya gamifikasi — level & XP check-in, streak, koin dan toko, badge, leaderboard, jurnal craving, pengingat, hingga avatar personal. Dibangun dengan Next.js, Supabase, dan Tailwind CSS, di-deploy ke Vercel.",
-        link: "https://f-smoke.vercel.app/",
+        link: "https://f-smoke.nasruladitri.space/",
         source: "https://github.com/nasruladtri/f-smoke",
         image: "/f-smoke-preview.png",
     },
