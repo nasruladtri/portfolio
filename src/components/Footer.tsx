@@ -171,7 +171,7 @@ export const Footer = () => {
                             <MessageCircle className="w-10 h-10" />
                         </a>
                         <a
-                            href="mailto:nasruladitri2@gmail.com"
+                            href="mailto:admin@nasruladitri.space"
                             className="flex items-center justify-center text-white text-3xl w-16 h-16 transition-transform duration-200 hover:-translate-y-0.5"
                             aria-label="Email"
                         >
