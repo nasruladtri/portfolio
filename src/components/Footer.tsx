@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowUp, Github, Instagram, Linkedin, Mail, MessageCircle, Youtube } from "lucide-react";
 import { PixelCoin } from "./Retro";
 
-const WHATSAPP_NUMBER = "6285784699144";
+const WHATSAPP_NUMBER = "6285138598932";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -114,80 +114,80 @@ export const Footer = () => {
                 </div>
             </section>
 
-            <footer className="bg-mario-dark border-t-4 border-black pt-14 pb-24">
+            <footer className="bg-mario-dark border-t-4 border-black pt-8 pb-12">
                 <div className="container text-center px-6">
                     <a
                         href="#top"
-                        className="inline-block text-white mb-4 transition-transform duration-200 hover:-translate-y-0.5"
+                        className="inline-block text-white mb-3 transition-transform duration-200 hover:-translate-y-0.5"
                         aria-label="Back to top"
                     >
-                        <ArrowUp className="w-10 h-10" />
+                        <ArrowUp className="w-7 h-7" />
                     </a>
 
-                    <div className="flex flex-row justify-center items-center gap-2 mb-6">
+                    <div className="flex flex-row justify-center items-center gap-3 mb-4">
                         <a
                             href="https://github.com/nasruladtri"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center text-white text-3xl w-16 h-16 transition-transform duration-200 hover:-translate-y-0.5"
+                            className="flex items-center justify-center text-white w-10 h-10 transition-transform duration-200 hover:-translate-y-0.5"
                             aria-label="GitHub"
                         >
-                            <Github className="w-10 h-10" />
+                            <Github className="w-7 h-7" />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/nasruladitri"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center text-white text-3xl w-16 h-16 transition-transform duration-200 hover:-translate-y-0.5"
+                            className="flex items-center justify-center text-white w-10 h-10 transition-transform duration-200 hover:-translate-y-0.5"
                             aria-label="LinkedIn"
                         >
-                            <Linkedin className="w-10 h-10" />
+                            <Linkedin className="w-7 h-7" />
                         </a>
                         <a
                             href="https://www.instagram.com/nasruladt"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center text-white text-3xl w-16 h-16 transition-transform duration-200 hover:-translate-y-0.5"
+                            className="flex items-center justify-center text-white w-10 h-10 transition-transform duration-200 hover:-translate-y-0.5"
                             aria-label="Instagram"
                         >
-                            <Instagram className="w-10 h-10" />
+                            <Instagram className="w-7 h-7" />
                         </a>
                         <a
                             href="https://www.youtube.com/@nasruladitri"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center text-white text-3xl w-16 h-16 transition-transform duration-200 hover:-translate-y-0.5"
+                            className="flex items-center justify-center text-white w-10 h-10 transition-transform duration-200 hover:-translate-y-0.5"
                             aria-label="YouTube"
                         >
-                            <Youtube className="w-10 h-10" />
+                            <Youtube className="w-7 h-7" />
                         </a>
                         <a
                             href={`https://wa.me/${WHATSAPP_NUMBER}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center text-white text-3xl w-16 h-16 transition-transform duration-200 hover:-translate-y-0.5"
+                            className="flex items-center justify-center text-white w-10 h-10 transition-transform duration-200 hover:-translate-y-0.5"
                             aria-label="WhatsApp"
                         >
-                            <MessageCircle className="w-10 h-10" />
+                            <MessageCircle className="w-7 h-7" />
                         </a>
                         <a
                             href="mailto:admin@nasruladitri.space"
-                            className="flex items-center justify-center text-white text-3xl w-16 h-16 transition-transform duration-200 hover:-translate-y-0.5"
+                            className="flex items-center justify-center text-white w-10 h-10 transition-transform duration-200 hover:-translate-y-0.5"
                             aria-label="Email"
                         >
-                            <Mail className="w-10 h-10" />
+                            <Mail className="w-7 h-7" />
                         </a>
                     </div>
 
-                    <hr className="mx-auto border-0 w-1/2 border-t-2 border-white/20 my-4" />
+                    <hr className="mx-auto border-0 w-1/2 border-t border-white/20 my-3" />
 
-                    <p className="font-retro text-lg text-white/70">
+                    <p className="font-retro text-sm text-white/70">
                         THANKS FOR PLAYING!
                     </p>
-                    <p className="font-retro text-lg text-white/50">
+                    <p className="font-retro text-xs text-white/50">
                         © {new Date().getFullYear()} Nasrul Aditri Rahmandika
                     </p>
-                    <span className="inline-block w-8 mt-4 coin-anim">
+                    <span className="inline-block w-6 mt-3 coin-anim">
                         <PixelCoin />
                     </span>
                 </div>
