@@ -21,7 +21,7 @@ const projects: Project[] = [
         description:
             "Sistem informasi pemerintah untuk Kabupaten Madiun. Dibangun dengan Laravel dan PostgreSQL untuk mengelola data administrasi secara terpusat, cepat, dan aman bagi instansi pemerintahan.",
         link: "https://serdadu.nasruladitri.space/",
-        image: "/serdadu-preview.png",
+        image: "/serdadu-preview.png.png",
     },
     {
         title: "My Portfolio",
